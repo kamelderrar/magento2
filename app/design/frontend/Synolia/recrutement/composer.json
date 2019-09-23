@@ -1,0 +1,21 @@
+{
+    "name": "synolia/recrutement",
+    "description": "projet de recrutement synolia",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kamelderrar",
+            "email": "kamel.derrar@laposte.net"
+        }
+    ],
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/theme-frontend-luma": "100.0.*",
+        "magento/framework": "100.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}

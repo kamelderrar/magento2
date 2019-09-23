@@ -41,13 +41,12 @@ module.exports = {
         ],
         dsl: 'less'
     },
-    synolia: {
+    recrutement: {
         area: 'frontend',
         name: 'Synolia/recrutement',
-        locale: 'fr_FR',
+        locale: 'en_US',
         files: [
-            'css/source/_custom.less',
-            'css/source/custom.css',
+            'css/source/_extend.less'
         ],
         dsl: 'less'
     },
