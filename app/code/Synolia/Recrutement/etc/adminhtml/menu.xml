@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Synolia_Recrutement::customerIp" title="customers ip addresses" module="Synolia_Recrutement" sortOrder="51" resource="Synolia_Recrutement::customerIp"/>
+        <add id="Synolia_Recrutement::list" title="Customers Ip addresses" module="Synolia_Recrutement" sortOrder="10" action="synolia_recrutement/list" resource="Synolia_Recrutement::list" parent="Synolia_Recrutement::customerIp"/>
+    </menu>
+</config>

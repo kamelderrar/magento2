@@ -44,9 +44,9 @@ module.exports = {
     recrutement: {
         area: 'frontend',
         name: 'Synolia/recrutement',
-        locale: 'en_US',
+        locale: 'fr_FR',
         files: [
-            'css/source/_extend.less'
+            'css/source/extend.less'
         ],
         dsl: 'less'
     },
