@@ -1,6 +1,6 @@
 <?php
 
-namespace Synolia\Recrutement\Controller\Adminhtml\Post;
+namespace Synolia\Recrutement\Controller\Adminhtml\CustomerIpAddress;
 
 class Index extends \Magento\Backend\App\Action
 {
@@ -18,10 +18,8 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->prepend((__('Posts')));
+        $resultPage->getConfig()->getTitle()->prepend((__('Customer Ip Addresses')));
 
         return $resultPage;
     }
-
-
 }

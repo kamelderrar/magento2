@@ -5,6 +5,12 @@ namespace Synolia\Recrutement\Setup;
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
 {
 
+    /**
+     * SETUP DB INSTALL
+     * @param \Magento\Framework\Setup\SchemaSetupInterface $setup
+     * @param \Magento\Framework\Setup\ModuleContextInterface $context
+     * @throws \Zend_Db_Exception
+     */
     public function install(\Magento\Framework\Setup\SchemaSetupInterface $setup, \Magento\Framework\Setup\ModuleContextInterface $context)
     {
         $installer = $setup;
@@ -20,7 +26,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     [
                         'identity' => true,
                         'nullable' => false,
-                        'primary'  => true,
+                        'primary' => true,
                         'unsigned' => true,
                     ],
                     'id'
@@ -45,18 +51,17 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     null,
                     [],
                     'Number of visit'
-                )
-                ;
+                );
             $installer->getConnection()->createTable($table);
 
             $installer->getConnection()->addIndex(
                 $installer->getTable('customer_ip_address'),
                 $setup->getIdxName(
                     $installer->getTable('customer_ip_address'),
-                    ['ip_address', 'last_visited', 'nb_visit'],
+                    ['ip_address', 'nb_visit'],
                     \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
                 ),
-                ['ip_address', 'last_visited', 'nb_visit'],
+                ['ip_address', 'nb_visit'],
                 \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
             );
         }

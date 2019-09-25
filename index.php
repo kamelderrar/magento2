@@ -17,6 +17,9 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('max_input_vars', 10000);
 
 try {
     require __DIR__ . '/app/bootstrap.php';
